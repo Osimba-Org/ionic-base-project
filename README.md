@@ -26,7 +26,7 @@ ionic config set telemetry false --global
 
 echo 'Already built was done and files are configured and provided in current repo. except for native builds'
 
-#ionic start main blank --type=angular --capacitor
+ionic start main blank --type=angular --capacitor
 cd main/
 
 echo 'setting up native-builds'
