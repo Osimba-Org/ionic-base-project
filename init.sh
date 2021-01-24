@@ -41,7 +41,7 @@ ionic config set telemetry false --global
 ionic config set -g npmClient yarn
 ionic config set -g yarn true
 ionic config set -g packageManager yarn
-
+yarn config set enableTelemetry 0
 
 << 'IONIC-START-NEW-PROJECT'
 Note : A possible source of issue. 
