@@ -21,7 +21,7 @@ nodeenv env
 
 echo 'Install node packages'
 
-npm install -g @ionic/cli native-run cordova-res
+npm install -g @ionic/cli @capacitor/cli
 ionic config set telemetry false --global
 
 echo 'Already built was done and files are configured and provided in current repo. except for native builds'
