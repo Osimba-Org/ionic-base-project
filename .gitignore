@@ -30,7 +30,10 @@ npm-debug.log*
 /plugins
 /www
 /env
-/env_*
+/env_* 
+/ios
+/android
+/electron
 
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
@@ -65,6 +68,9 @@ plugins/ios.json
 $RECYCLE.BIN/
 env/
 env_*/ 
+ios/
+android/
+electron/
 
 
 .DS_Store
