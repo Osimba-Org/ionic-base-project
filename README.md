@@ -36,5 +36,6 @@ Starting the app
 cd main/
 npm install @ionic/pwa-elements
 ionic build
+ionic cap add ios
 ionic cap run ios --external -l
 ```
