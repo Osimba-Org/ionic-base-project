@@ -76,7 +76,7 @@ git commit -m "First commit"
 git remote -v
 
 git push -u origin main
-
+# use -f to force push. and avoid pulling. <- this will overwrite the remote version of files. Be carefull.
 now set the git repo url to the new git repository you created.
 
 ```
