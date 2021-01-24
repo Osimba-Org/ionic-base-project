@@ -35,3 +35,11 @@ ionic build
 ionic cap add ios
 ionic cap run ios --external -l
 ```
+
+```
+Now change the app identifies in xcode. And run as needed.
+```
+
+```
+# Start adding additional scripts here.
+```
