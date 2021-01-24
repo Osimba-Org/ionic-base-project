@@ -2,6 +2,13 @@
 
 # Main
 
+```
+# change the git server url using following.
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+# check if it is working.
+git remote -v
+```
+
 Setup env.
 
 ```jsx

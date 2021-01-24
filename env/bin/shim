@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH='/Users/home/Developer/Projects/ionic-base-project/env/lib/node_modules'
+export NPM_CONFIG_PREFIX='/Users/home/Developer/Projects/ionic-base-project/env'
+export npm_config_prefix='/Users/home/Developer/Projects/ionic-base-project/env'
+exec 'env/bin/node' "$@"
