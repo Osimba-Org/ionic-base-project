@@ -12,37 +12,54 @@ git remote -v
 
 Init Script
 
-```jsx
-echo 'setting up env'
+```bash
+echo 'setting up python env.'
 conda activate menuroma
+# conda activate your_env_name
 
-pip install nodeenv
-timestamp=$(date +%d-%m-%Y_%H-%M-%S)
-env="env_${timestamp}"
-nodeenv "${env}"
-. "${env}/bin/activate"
+```
 
-echo 'Install node packages'
+```bash
+# Set proper permission to run the script files.
+chmod +x init.sh
+chmod +x hard_ios_build.sh
 
-npm install -g @ionic/cli @capacitor/cli
-ionic config set telemetry false --global
+# to answer the question of : do you want to create ionic account ?
+# Note : by default we are using zsh. If want to run bash shell.
+# change #!/bin/zsh in init.sh and other scripts to
+# #!/bin/bash or any other shells.
+echo 'n' | ./init.sh
+```
 
-echo 'Already built was done and files are configured and provided in current repo. except for native builds'
-
-ionic start main blank --type=angular --capacitor
+```bash
 cd main/
-
-echo 'setting up native-builds'
-rm -rf ios electron android www
-ionic build
-ionic cap add ios
-ionic cap run ios --external -l
 ```
 
 ```
-Now change the app identifies in xcode. And run as needed.
+Later - change the app identifies in capacitor config file.
+Ionic by default lazy loads configs. So hard rebuild the entire app. So that run time configs would change to reflect that new app id.
+```
+
+```bash
+ENJOY !!
+```
+
+Other high funda commands.
+
+```jsx
+# activating env without manually typing env etc..
+env="$(ls -d env*)"
+. "${env}/bin/activate"
+# we are not using nave for now.
+# nave use "${env}"
 ```
 
 ```
 # Start adding additional scripts here.
+```
+
+```
+TODO :
+force to use yarn rather than npm.
+https://dev.to/ascorbic/force-installs-to-use-yarn-not-npm-1lhf
 ```
