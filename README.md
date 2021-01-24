@@ -68,9 +68,9 @@ as you already cloned. git is already initiated.
 then link that to current ionic-base-project files to the new git repo you created
 at github.com as follows.
 
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 git add .
 git commit -m "First commit"
-git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 # to check which repo you are on.
 git remote -v
