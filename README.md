@@ -96,10 +96,3 @@ ENJOY !!
 # yarn global add <package_name>
 # yarn add <package_name>
 ```
-
-```
-
-TODO :
-force to use yarn rather than npm.
-https://dev.to/ascorbic/force-installs-to-use-yarn-not-npm-1lhf
-```
