@@ -15,9 +15,12 @@ Init Script
 ```jsx
 echo 'setting up env'
 conda activate menuroma
+
 pip install nodeenv
-nodeenv env
-. env/bin/activate
+timestamp=$(date +%d-%m-%Y_%H-%M-%S)
+env="env_${timestamp}"
+nodeenv "${env}"
+. "${env}/bin/activate"
 
 echo 'Install node packages'
 
