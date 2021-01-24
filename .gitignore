@@ -29,7 +29,6 @@ npm-debug.log*
 /platforms
 /plugins
 /www
-/main
 
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
@@ -63,8 +62,9 @@ plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
 env/ 
-main/
+
 
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+!.gitignore
