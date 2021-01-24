@@ -19,7 +19,7 @@ conda activate menuroma
 #following and run the scripts.
 #chmod +x init.sh
 #chmod +x hard_ios_build.sh
-
+#chmod +x disable_npm_cmd_usage.sh
 TROUBLESHOOT-PERMISSION-COMMENT
 
 
@@ -35,30 +35,37 @@ TROUBLESHOOT-PERMISSION-COMMENT
 RUNNING-SHELL-CMDS
 echo "n" | zsh init.sh
 
-cd main/
-
 # activating env again.
 # As previous builds are made in a new shell that you selected above.
-# current shell i.e. terminal doesn't know that env. So need to activate
+# current shell i.e. terminal does not know that env. So need to activate
 # the env in current shell i.e. terminal.
-env="$(ls -d ../ionic-base-project/env*)"
-. "../ionic-base-project/${env}/bin/activate"
-# we are not using nave for now.
+env="$(ls -d env*)"
+echo "${env}"
+. "${env}/bin/activate"
+
+# note : we are not using nave for now.
 # nave use "${env}"
 
+# Entering into the ionic project created i.e. main
+cd main/
 
 #Building the ionic app. And also triggering ios native build
-zsh ../ionic-base-project/hard_ios_build.sh
+zsh ../hard_ios_build.sh
+
+zsh ../disable_npm_cmd_usage.sh
+
 
 ```
 
-```
+```bash
 1. Now you can change the cloned ionic-base-project folder name
-to an as desired project name.
+to an as desired folder name.
 
-2. Create a new git repo if needed at github.com
-then link that to current ionic-base-project files.
-as follows.
+2. Create a new git repo if needed at github.com - not locally.
+as you already cloned. git is already initiated.
+
+then link that to current ionic-base-project files to the new git repo you created
+at github.com as follows.
 
 git add .
 git commit -m "First commit"
@@ -90,7 +97,6 @@ ENJOY !!
 ```
 
 ```
-echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
 
 TODO :
 force to use yarn rather than npm.

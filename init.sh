@@ -50,4 +50,3 @@ ionic config set -g packageManager yarn
 # create a blank ionic project named as 'main'
 IONIC-START-NEW-PROJECT
 ionic start main blank --type=angular --capacitor --quiet --no-git
-cd main/
