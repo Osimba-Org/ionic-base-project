@@ -15,22 +15,24 @@ conda activate menuroma
 # conda activate your_env_name
 
 << 'TROUBLESHOOT-PERMISSION-COMMENT'
-#If you get any permission errors try.
-#following and run the scripts.
-#chmod +x init.sh
-#chmod +x hard_ios_build.sh
-#chmod +x disable_npm_cmd_usage.sh
+If you get any permission errors try.
+following and run the scripts.
+
+chmod +x init.sh
+chmod +x hard_ios_build.sh
+chmod +x disable_npm_cmd_usage.sh
 TROUBLESHOOT-PERMISSION-COMMENT
 
 
 << 'RUNNING-SHELL-CMDS'
-# Note 2: A possible source of issue.
-# Sometimes ionic cli asks questions.
-# if in future it changes questions it asks. manage accordingly.
+Note 2: A possible source of issue.
+Sometimes ionic cli asks questions.
+if in future it changes questions it asks. manage accordingly.
 
-# to answer the question of : do you want to create ionic account ? we are echoing no and passing to the script file.
-# Note 1: by default we are using zsh. If want to run bash shell.
-# change it bash init.sh or <shell> shell_script
+To answer the question of : do you want to create ionic account ? we are echoing no and passing to the script file.
+
+Note 1: by default we are using zsh. If want to run bash shell.
+change it bash init.sh or <shell> shell_script
 
 RUNNING-SHELL-CMDS
 echo "n" | zsh init.sh
@@ -50,10 +52,9 @@ echo "${env}"
 cd main/
 
 #Building the ionic app. And also triggering ios native build
-zsh ../hard_ios_build.sh
-
 zsh ../disable_npm_cmd_usage.sh
 
+zsh ../hard_ios_build.sh
 
 ```
 
